@@ -1,7 +1,7 @@
 <!--begin::User-->
 <div class="d-flex align-items-stretch" id="kt_header_user_menu_toggle">
     <!--begin::Menu wrapper-->
-    <div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+    <div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="{{bottomEndDirectionClass()}}" data-kt-menu-flip="bottom">
         <img src="{{ asset('assets/dashboard/media/avatars/150-2.jpg') }}" alt="metronic" />
     </div>
     <!--begin::Menu-->
@@ -43,7 +43,8 @@
         </div>
         <!--end::Menu item-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+        <!-- default is left-start in english but in arabic will be as right-start -->
+        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="{{leftStartDirectionClass()}}">
             <a href="#" class="menu-link px-5">
                 <span class="menu-title">My Subscription</span>
                 <span class="menu-arrow"></span>
@@ -97,53 +98,37 @@
         <div class="separator my-2"></div>
         <!--end::Menu separator-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="{{leftStartDirectionClass()}}">
             <a href="#" class="menu-link px-5">
-                <span class="menu-title position-relative">Language
-                <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-                <img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('assets/dashboard/media/flags/united-states.svg') }}" alt="" /></span></span>
+                <span class="menu-title position-relative">
+                    Language
+                    <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">
+                        {{ LaravelLocalization::getCurrentLocaleNative() }}
+                        @if(App::getLocale() == 'ar')
+                            <img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('assets/dashboard/media/flags/egypt.svg') }}" />
+                        @elseif(App::getLocale() == 'en')
+                            <img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('assets/dashboard/media/flags/united-states.svg') }}" />
+                        @endif
+                    </span>
+                </span>
             </a>
             <!--begin::Menu sub-->
             <div class="menu-sub menu-sub-dropdown w-175px py-4">
                 <!--begin::Menu item-->
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                 <div class="menu-item px-3">
-                    <a href="#" class="menu-link d-flex px-5 active">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/united-states.svg') }}" alt="" />
-                    </span>English</a>
+                    <a class="menu-link d-flex px-5 active" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        <span class="symbol symbol-20px me-4">
+                            @if($properties['native'] == 'العربية')
+                                <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/egypt.svg') }}" />
+                            @elseif($properties['native'] == "English")
+                                <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/united-states.svg') }}" />
+                            @endif
+                        </span>
+                        {{ $properties['native'] }}
+                    </a>
                 </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/spain.svg') }}" alt="" />
-                    </span>Spanish</a>
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="#" class="menu-link d-flex px-5">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/germany.svg') }}" alt="" />
-                    </span>German</a>
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="#" class="menu-link d-flex px-5">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/japan.svg') }}" alt="" />
-                    </span>Japanese</a>
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="#" class="menu-link d-flex px-5">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{ asset('assets/dashboard/media/flags/france.svg') }}" alt="" />
-                    </span>French</a>
-                </div>
+                @endforeach
                 <!--end::Menu item-->
             </div>
             <!--end::Menu sub-->
