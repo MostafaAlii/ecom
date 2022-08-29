@@ -3,7 +3,7 @@
     <!--begin::Brand-->
     <div class="aside-logo flex-column-auto" id="kt_aside_logo">
         <!--begin::Logo-->
-        <a href="#">
+        <a href="{{route('dashboard.index')}}">
             <img alt="Logo" src="{{ asset('assets/dashboard/media/logos/logo-demo13.svg') }}" class="h-15px logo" />
         </a>
         <!--end::Logo-->
@@ -28,15 +28,15 @@
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
                 <div class="menu-item">
                     <div class="menu-content pb-2">
-                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">Dashboard</span>
+                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{trans('dashboard/sidebar.dashboard')}}</span>
                     </div>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link active" href="../../demo13/dist/index.html">
+                    <a class="menu-link active" href="{{route('dashboard.index')}}">
                         <span class="menu-icon">
                             <i class="bi bi-grid fs-3"></i>
                         </span>
-                        <span class="menu-title">Default</span>
+                        <span class="menu-title">{{trans('dashboard/sidebar.dashboard')}}</span>
                     </a>
                 </div>
                 <div class="menu-item">
