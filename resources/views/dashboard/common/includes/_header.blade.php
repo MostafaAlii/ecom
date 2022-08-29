@@ -24,18 +24,23 @@
                 <div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
                     <!--begin::Menu-->
                     <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+                        <!-- Start Dashboard Link -->
                         <div class="menu-item me-lg-1">
-                            <a class="menu-link active py-3" href="../../demo13/dist/index.html">
+                            <a class="menu-link active py-3" href="#">
                                 <span class="menu-title">Dashboard</span>
                             </a>
                         </div>
-                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                        <!-- End Dashboard Link -->
+                        <!-- default is bottom-start in english but in arabic will be as bottom-end -->
+                        <!-- Start Craft Menu -->
+                        <div data-kt-menu-trigger="click" data-kt-menu-placement="{{bottomStartDirectionClass()}}" class="menu-item menu-lg-down-accordion me-lg-1">
                             <span class="menu-link py-3">
                                 <span class="menu-title">Crafted</span>
                                 <span class="menu-arrow d-lg-none"></span>
                             </span>
                             <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-archive fs-3"></i>
@@ -44,7 +49,8 @@
                                         <span class="menu-arrow"></span>
                                     </span>
                                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -103,7 +109,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -178,7 +184,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -205,7 +211,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -232,7 +238,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -259,7 +265,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -318,7 +324,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -345,7 +351,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -374,7 +380,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-person fs-2"></i>
@@ -441,7 +447,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-sticky fs-3"></i>
@@ -450,7 +456,8 @@
                                         <span class="menu-arrow"></span>
                                     </span>
                                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -501,7 +508,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -552,7 +559,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -603,7 +610,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -686,7 +693,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -731,7 +738,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-shield-check fs-3"></i>
@@ -740,7 +747,8 @@
                                         <span class="menu-arrow"></span>
                                     </span>
                                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -783,7 +791,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -826,7 +834,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -877,7 +885,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -906,7 +914,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-layers fs-3"></i>
@@ -967,13 +975,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                        <!-- End Craft Menu -->
+                        <!-- Start App Menu -->
+                        <div data-kt-menu-trigger="click" data-kt-menu-placement="{{bottomStartDirectionClass()}}" class="menu-item menu-lg-down-accordion me-lg-1">
                             <span class="menu-link py-3">
                                 <span class="menu-title">Apps</span>
                                 <span class="menu-arrow d-lg-none"></span>
                             </span>
                             <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-people fs-3"></i>
@@ -981,8 +992,9 @@
                                         <span class="menu-title">User Management</span>
                                         <span class="menu-arrow"></span>
                                     </span>
+                                    <!-- default is right-start in english but in arabic will be as left-start -->
                                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -1009,7 +1021,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -1046,7 +1059,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-hr fs-3"></i>
@@ -1054,8 +1068,9 @@
                                         <span class="menu-title">Invoice Management</span>
                                         <span class="menu-arrow"></span>
                                     </span>
+                                    <!-- default is right-start in english but in arabic will be as left-start -->
                                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -1092,7 +1107,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-hr fs-3"></i>
@@ -1109,7 +1125,8 @@
                                                 <span class="menu-title">Overview</span>
                                             </a>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -1136,7 +1153,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                        <!-- default is right-start in english but in arabic will be as left-start -->
+                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                             <span class="menu-link py-3">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -1189,7 +1207,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-printer fs-3"></i>
@@ -1224,7 +1243,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-cart2 fs-3"></i>
@@ -1267,7 +1287,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-cart2 fs-3"></i>
@@ -1310,7 +1331,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi-chat-left fs-3"></i>
@@ -1345,7 +1367,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-down-accordion">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi-chat-left fs-3"></i>
@@ -1390,13 +1413,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                        <!-- End App Menu -->
+                        <!-- Start Layouts Menu -->
+                        <div data-kt-menu-trigger="click" data-kt-menu-placement="{{bottomStartDirectionClass()}}" class="menu-item menu-lg-down-accordion me-lg-1">
                             <span class="menu-link py-3">
                                 <span class="menu-title">Layouts</span>
                                 <span class="menu-arrow d-lg-none"></span>
                             </span>
                             <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-dropdown">
+                                <!-- default is right-start in english but in arabic will be as left-start -->
+                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="{{rightStartDirectionClass()}}" class="menu-item menu-lg-dropdown">
                                     <span class="menu-link py-3">
                                         <span class="menu-icon">
                                             <i class="bi bi-layout-sidebar fs-3"></i>
@@ -1417,7 +1443,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                        <!-- End Layouts Menu -->
+                        <!-- Start Resources Menu -->
+                        <div data-kt-menu-trigger="click" data-kt-menu-placement="{{bottomStartDirectionClass()}}" class="menu-item menu-lg-down-accordion me-lg-1">
                             <span class="menu-link py-3">
                                 <span class="menu-title">Resources</span>
                                 <span class="menu-arrow d-lg-none"></span>
@@ -1471,7 +1499,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                        <!-- End Resources Menu -->
+                        <!-- Start Mega Menu -->
+                        <div data-kt-menu-trigger="click" data-kt-menu-placement="{{bottomStartDirectionClass()}}" class="menu-item menu-lg-down-accordion me-lg-1">
                             <span class="menu-link py-3">
                                 <span class="menu-title">Mega Menu</span>
                                 <span class="menu-arrow d-lg-none"></span>
@@ -1621,6 +1651,7 @@
                                 <!--end:Row-->
                             </div>
                         </div>
+                        <!-- End Mega Menu -->
                     </div>
                     <!--end::Menu-->
                 </div>
@@ -1634,7 +1665,8 @@
                     <!--begin::Quick links-->
                     <div class="d-flex align-items-stretch">
                         <!--begin::Menu wrapper-->
-                        <div class="topbar-item px-3 px-lg-5" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+                        <!-- default is bottom-end in english but in arabic will be as bottom-start -->
+                        <div class="topbar-item px-3 px-lg-5" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="{{bottomEndDirectionClass()}}" data-kt-menu-flip="bottom">
                             <i class="bi bi-bar-chart fs-3"></i>
                         </div>
                         <!--begin::Menu-->
@@ -1748,7 +1780,8 @@
                     <!--begin::Notifications-->
                     <div class="d-flex align-items-stretch">
                         <!--begin::Menu wrapper-->
-                        <div class="topbar-item position-relative px-3 px-lg-5" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+                        <!-- default is bottom-end in english but in arabic will be as bottom-start -->
+                        <div class="topbar-item position-relative px-3 px-lg-5" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="{{bottomEndDirectionClass()}}" data-kt-menu-flip="bottom">
                             <i class="bi bi-app-indicator fs-3"></i>
                         </div>
                         <!--begin::Menu-->

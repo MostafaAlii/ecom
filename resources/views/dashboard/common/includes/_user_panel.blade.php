@@ -1,7 +1,7 @@
 <!--begin::User-->
 <div class="d-flex align-items-stretch" id="kt_header_user_menu_toggle">
     <!--begin::Menu wrapper-->
-    <div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+    <div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="{{bottomEndDirectionClass()}}" data-kt-menu-flip="bottom">
         <img src="{{ asset('assets/dashboard/media/avatars/150-2.jpg') }}" alt="metronic" />
     </div>
     <!--begin::Menu-->
@@ -43,7 +43,8 @@
         </div>
         <!--end::Menu item-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+        <!-- default is left-start in english but in arabic will be as right-start -->
+        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="{{leftStartDirectionClass()}}">
             <a href="#" class="menu-link px-5">
                 <span class="menu-title">My Subscription</span>
                 <span class="menu-arrow"></span>
@@ -97,7 +98,7 @@
         <div class="separator my-2"></div>
         <!--end::Menu separator-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="{{leftStartDirectionClass()}}">
             <a href="#" class="menu-link px-5">
                 <span class="menu-title position-relative">Language
                 <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
