@@ -27,7 +27,7 @@
                         <!-- Start Dashboard Link -->
                         <div class="menu-item me-lg-1">
                             <a class="menu-link active py-3" href="#">
-                                <span class="menu-title">Dashboard</span>
+                                <span class="menu-title">{{trans('dashboard/header.main_dashboard')}}</span>
                             </a>
                         </div>
                         <!-- End Dashboard Link -->
