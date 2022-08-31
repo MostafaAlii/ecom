@@ -16,9 +16,15 @@
                 <!--end::Avatar-->
                 <!--begin::Username-->
                 <div class="d-flex flex-column">
-                    <div class="fw-bolder d-flex align-items-center fs-5">Max Smith
-                    <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span></div>
-                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">max@kt.com</a>
+                    <div class="fw-bolder d-flex align-items-center fs-5">
+                        {{auth()->user()->name}}
+                        <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">
+                            Pro
+                        </span>
+                    </div>
+                    <a class="fw-bold text-muted text-hover-primary fs-7">
+                        {{auth()->user()->email}}
+                    </a>
                 </div>
                 <!--end::Username-->
             </div>
@@ -140,9 +146,12 @@
         </div>
         <!--end::Menu item-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5">
-            <a href="#" class="menu-link px-5">Sign Out</a>
-        </div>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <div class="menu-item px-5 my-1">
+                <button type="submit" class="btn btn-sm menu-link px-5">{{trans('dashboard/auth.logout')}}</button>
+            </div>
+        </form>
         <!--end::Menu item-->
         <!--begin::Menu separator-->
         <div class="separator my-2"></div>
