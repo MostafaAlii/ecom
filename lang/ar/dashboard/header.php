@@ -1,4 +1,4 @@
 <?php
 return [
-    'main_dashboard'                     =>                  'لوحة التحكم',
+    'main_dashboard'                     =>                  'لوحة التحكم',    
 ];

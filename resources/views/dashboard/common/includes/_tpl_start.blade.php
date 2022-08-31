@@ -39,6 +39,7 @@
 		<!--end::Global Stylesheets Bundle-->
         <style>
             html, body, a, i, p, h1, h2, h3, h4, h5, h6, table, .btn, .alert {font-family: 'Cairo', sans-serif;}
+			.logoutBtn{border-color: transparent !important;}
         </style>
 	</head>
 	<!--end::Head-->

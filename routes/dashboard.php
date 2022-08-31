@@ -5,11 +5,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth']
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function(){
-        Route::prefix('Dashboard')->group(function() {
+        /******************************** Admin Routes ****************** */
+        Route::prefix('Dashboard')->middleware(['auth'])->group(function() {
             Route::get('/', Dashboard\DashboardController::class)->name('dashboard');
+            Route::resource('Categories', Dashboard\CategoryController::class);
         });
         /******************************** End Other Authentication Route ****************** */
+        require base_path('routes/auth.php');
 });
-require __DIR__.'/auth.php';
