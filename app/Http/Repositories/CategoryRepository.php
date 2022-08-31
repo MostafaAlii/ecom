@@ -14,7 +14,6 @@ class CategoryRepository implements CategoryInterface {
     }
 
     public function store($request) {
-        //dd($request->all());
         $this->category->create([
             'name' => $request->input('name'),
             'slug' => Str::slug($request->input('name')),
@@ -22,6 +21,10 @@ class CategoryRepository implements CategoryInterface {
             'description' => $request->input('description'),
             'parent_id' => $request->input('parent_id'),
         ]);
-        return redirect()->back()->with('success', 'Category created successfully');
+        $notification = array(
+            'message' => trans('dashboard/category.category_created_successfully'),
+            'alert-type' => 'success'
+        );
+        return redirect()->route('Categories.index')->with($notification);
     }    
 }

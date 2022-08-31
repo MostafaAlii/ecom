@@ -13,13 +13,21 @@ class AuthenticatedSessionController extends Controller {
     public function store(LoginRequest $request) {
         $request->authenticate();
         $request->session()->regenerate();
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $notification = array(
+            'message' => auth()->user()->name .' '. trans('dashboard/auth.welcome_back'),
+            'alert-type' => 'success'
+        );
+        return redirect()->intended(RouteServiceProvider::HOME)->with($notification);
     }
 
     public function destroy(Request $request) {
         Auth::guard('web')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        $notification = array(
+            'message' => trans('dashboard/auth.logout_success'),
+            'alert-type' => 'warning'
+        );
+        return redirect()->route('login')->with($notification);
     }
 }

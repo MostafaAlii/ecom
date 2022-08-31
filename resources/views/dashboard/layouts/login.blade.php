@@ -1,4 +1,5 @@
 @include('dashboard.common.includes.login._tpl_start')
+@include('dashboard.common._partials.messages')
 @yield('content')
 @include('dashboard.common.includes.login._footer')
 @include('dashboard.common.includes.login._tpl_end')

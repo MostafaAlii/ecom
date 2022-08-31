@@ -4,6 +4,7 @@
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     @include('dashboard.common.includes._toolbar')
+    @include('dashboard.common._partials.messages')
     @yield('content')
 </div>
 @include('dashboard.common.includes._footer')

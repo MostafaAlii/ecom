@@ -14,4 +14,9 @@ return [
     'sorry_not_category_avilable'              =>                      'عذراً، لا يوجد أقسام متاحة',
     'this_is_parent_category'                  =>                      'هذا القسم الرئيسي',
     'parent_category'                           =>                      'قسم رئيسي',
+
+    // Success && Error Messages
+    'category_created_successfully'             =>                      'تم إنشاء القسم بنجاح',
+    'category_updated_successfully'             =>                      'تم تحديث القسم بنجاح',
+    'category_deleted_successfully'             =>                      'تم حذف القسم بنجاح',
 ];
